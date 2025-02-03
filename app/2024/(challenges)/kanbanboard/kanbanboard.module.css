@@ -1,0 +1,45 @@
+.container {
+  width: 90rem;
+  height: 53rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: url(../../../../public/kanbanbackground.png);
+  padding: 2rem;
+}
+.card {
+  background: #ffffff4d;
+  width: 27rem;
+  height: 100%;
+  border: 1px solid #cd7891;
+  opacity: 0.94;
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.card h3 {
+  opacity: 1;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0 2rem;
+}
+.card ul li {
+  display: flex;
+  margin: 1rem 2rem;
+
+  background: #fff;
+  border-radius: 10px;
+  color: black;
+  padding: 14px 24px;
+  gap: 10px;
+  border-radius: 10px;
+}
+.card ul li input {
+  width: 30px;
+}
+.card ul li label {
+  font-family: Helvetica Neue;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32px;
+}

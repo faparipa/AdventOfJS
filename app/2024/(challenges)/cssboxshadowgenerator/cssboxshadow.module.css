@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f1f1fa;
+  width: 600px;
+  height: 800px;
+  color: black;
+  padding: 1rem;
+}
+.container h2 {
+  font-size: 44px;
+  font-weight: bold;
+  width: 20rem;
+  margin-top: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.rangeBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: right;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+}
+.rangeBox input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  margin: 0;
+  font-size: 16px;
+  text-align: right;
+}
+.rangeContainer {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.rangeContainer label {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+/*
+.colorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.colorContainer div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.colorBox {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+} */
+.toggleContainer {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  width: 250px;
+  height: 50px;
+  background-color: rgb(48, 48, 98);
+  color: rgb(213, 197, 148);
+  border-radius: 10px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.boxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 800px;
+  background-color: #fff;
+}
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: #f3a712;
+}
+.mainContainer {
+  display: flex;
+}

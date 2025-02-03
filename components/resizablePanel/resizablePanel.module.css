@@ -1,0 +1,87 @@
+/* .panel1 {
+  background: #cae3db;
+  border: solid 1px black;
+}
+.panel2 {
+  background: #698662;
+  border: solid 1px black;
+}
+.panel3 {
+  background: #536a4e;
+  border: solid 1px black;
+}
+
+.resizable-panel {
+  position: relative;
+  border: solid 1px black;
+}
+
+.resize-handle {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+} */
+/* 
+.resizablePanel {
+  position: relative;
+  border: solid 1px black;
+}
+
+.panel1 {
+  background: #cae3db;
+}
+
+.panel2 {
+  background: #698662;
+}
+
+.panel3 {
+  background: #536a4e;
+}
+
+
+.resizeHandle {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+} */
+.container {
+  display: flex;
+  height: 600px;
+  width: 100%;
+  border: 1px solid #000;
+}
+
+.panel {
+  position: relative;
+  border: solid 1px black;
+}
+
+.resizer {
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: ew-resize; /* Horizontális méretezés kurzor */
+}
+
+.panel1 {
+  background: #cae3db;
+}
+
+.panel2 {
+  background: #698662;
+}
+
+.panel3 {
+  background: #536a4e;
+}

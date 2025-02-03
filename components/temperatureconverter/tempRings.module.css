@@ -1,0 +1,127 @@
+.wrapper {
+  width: 550px;
+  height: 700px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.circles {
+  font-display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.circle_dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dialComponent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle_in {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 298px;
+  height: 298px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    #7e0481 0%,
+    #0009ff 25%,
+    #7e0481 50%,
+    #ff0000 75%,
+    #7e0481 100%
+  );
+}
+.inputContainer {
+  position: absolute;
+  width: 265px;
+  height: 265px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5; /* Az input mezőt a körök fölé helyezzük */
+  color: black;
+  display: flex;
+  align-items: center;
+
+  padding: 20px;
+}
+.deg {
+  position: absolute;
+  width: 170px;
+  margin-left: 1rem;
+  z-index: 5; /* Az input mezőt a körök fölé helyezzük */
+  text-align: center;
+  font-size: 65px;
+  display: flex;
+}
+.deg input {
+  border: none;
+  font-size: 65px;
+  width: 100%;
+}
+
+.number0,
+.number10,
+.number20,
+.number30 {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  z-index: 100;
+}
+
+.number0 {
+  top: 135%;
+  left: 52%;
+  transform: translateX(-50%) translateY(-50%);
+  transform-origin: center;
+}
+
+.number10 {
+  top: 50%;
+  left: -50%;
+  transform: translateY(-50%) translateX(50%);
+  transform-origin: center;
+}
+
+.number20 {
+  top: -35%;
+  left: 51%;
+  transform: translateX(-50%) translateY(-50%);
+  transform-origin: center;
+}
+
+.number30 {
+  top: 50%;
+  right: -50%;
+  transform: translateY(-50%) translateX(-50%);
+  transform-origin: center;
+}
+
+.btn {
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  background: none;
+  z-index: 100;
+}

@@ -1,0 +1,36 @@
+.dialContainer {
+  position: relative;
+  width: 380px;
+  height: 380px;
+}
+
+.circleContainer {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle_out {
+  position: absolute;
+  width: 366px;
+  height: 366px;
+}
+
+.dialC {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 0px;
+  left: 174px;
+  transform-origin: center;
+}
+/* .dialContainer.dialPressed .circle_out {
+  filter: brightness(0.7); /* Darkens the dial 
+} */

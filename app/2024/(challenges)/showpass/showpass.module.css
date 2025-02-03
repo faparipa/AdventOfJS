@@ -1,0 +1,16 @@
+:root {
+  --robin-egg-blue: #26c9c3;
+  --bunting: #191349;
+  --white: #fff;
+  --gallery: #f0f0f0;
+
+  --easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  /* justify-content: center; */
+}

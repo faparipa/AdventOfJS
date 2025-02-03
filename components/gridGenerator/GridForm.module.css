@@ -1,0 +1,58 @@
+.formContainer {
+  width: 25rem;
+  background: #1d1d1d;
+}
+.inputContainer {
+  display: flex;
+  align-items: center;
+  width: 17rem;
+  margin: 2rem 2rem;
+  font-size: 16px;
+}
+.inputContainer label {
+  width: 15rem;
+}
+.input {
+  width: 5rem;
+}
+.input input {
+  width: 100%;
+  height: 3rem;
+  background-color: #000000;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+.formContainer label span {
+  color: #797979;
+}
+.title {
+  margin-left: 2rem;
+  font-size: 44px;
+  color: #eaff00;
+}
+.btn {
+  width: 15rem;
+  height: 3rem;
+  margin: 2rem;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  background: #000;
+  color: #eaff00;
+}
+.noActive {
+  width: 15rem;
+  height: 3rem;
+  margin: 2rem;
+  border-radius: 20px;
+  background-color: #1d1d1d;
+  border: 1px solid #fff;
+  color: #eaff00;
+}
+
+.btn:hover {
+  border: 3px solid #eaff00;
+  font-size: larger;
+}

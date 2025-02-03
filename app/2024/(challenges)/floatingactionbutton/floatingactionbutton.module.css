@@ -1,0 +1,103 @@
+/* container to center the button on screen */
+.container {
+  background: black;
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+.icons {
+  border-top-left-radius: 100px;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* position the action button at the bottom right */
+.fab {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: #0fff2f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+/* social media icons container */
+.socialIcons {
+  display: flex;
+
+  gap: 5px;
+  z-index: 5;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.icon1 {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: #3f3f3f;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 10px; /* Adjust this value to control the space above the button */
+  right: 90px;
+}
+.icon2 {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: #3f3f3f;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 45px; /* Adjust this value to control the space above the button */
+  right: 95px;
+}
+.icon3 {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: #3f3f3f;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 78px; /* Adjust this value to control the space above the button */
+  right: 78px;
+}
+.icon4 {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: #3f3f3f;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 90px; /* Adjust this value to control the space above the button */
+  right: 45px;
+}
+.icon5 {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: #3f3f3f;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 90px; /* Adjust this value to control the space above the button */
+  right: 10px;
+}
+/* For icon size in the FAB */
+.fab img {
+  width: 30px;
+  height: 30px;
+}
+
+/* For smooth transition on icon expansion */

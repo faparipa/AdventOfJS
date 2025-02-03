@@ -1,0 +1,52 @@
+.codeContainer {
+  position: relative;
+  background-color: #f1f88a;
+  width: 100%;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.closeBtn:hover {
+  font-size: 2.2rem;
+  color: red;
+}
+.title {
+  color: black;
+  margin-bottom: 0;
+}
+.codeContainer pre {
+  position: relative;
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1rem 3rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+}
+
+.icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}

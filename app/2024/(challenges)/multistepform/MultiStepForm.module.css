@@ -1,0 +1,89 @@
+.container {
+  background-color: black;
+  width: 618px;
+  height: 803px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 4rem;
+  font-size: 24px;
+}
+
+.inputField label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.inputField input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: none;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.radioGroup h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.radioContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 15px;
+}
+
+.radioItem {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxGroup ul {
+  list-style: none;
+  padding: 0;
+}
+.checkboxGroup h4 {
+  font-size: 16px;
+}
+
+.checkboxGroup li {
+  margin-bottom: 10px;
+}
+.btnContainer {
+  margin-top: 12rem;
+  display: flex;
+}
+
+.btn {
+  background-color: #33ff01;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+
+  align-self: flex-start; /* Aligns button to the left, adjust as needed */
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+.backBtn {
+  background-color: #2d2d2d;
+  width: 115px;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 26px;
+  color: #32ff00;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}

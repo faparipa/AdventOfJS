@@ -1,0 +1,113 @@
+[
+  {
+    "people": "Men's",
+    "items": [
+      {
+        "category": "Men's Tops",
+        "options": [
+          "T-Shirts",
+          "Button Downs",
+          "Graphic T-Shirts",
+          "Licensed Graphics",
+          "Coats & Jackets",
+          "Sweaters",
+          "Sweatshirts & Hoodies",
+          "Polos"
+        ]
+      },
+      {
+        "category": "Men's Bottoms",
+        "options": [
+          "Jeans",
+          "Pants",
+          "Sweatpants",
+          "Pajama Bottoms",
+          "Shorts",
+          "Swimsuits"
+        ]
+      },
+      {
+        "category": "Active",
+        "options": ["Activewear Tops", "Activewear Bottoms", "Shop by Activity"]
+      },
+      {
+        "category": "Accessories",
+        "options": [
+          "Socks & Underwear",
+          "Pajamas & Loungewear",
+          "Shoes",
+          "Accessories"
+        ]
+      }
+    ]
+  },
+  {
+    "people": "Women's",
+    "items": [
+      { "category": "Pajamas", "options": [] },
+      { "category": "Activewear", "options": [] },
+      { "category": "All Bottoms", "options": [] },
+      { "category": "Jeans", "options": [] },
+      { "category": "Pants", "options": [] },
+      { "category": "All Tops", "options": [] },
+      { "category": "Sweaters & Cardigans", "options": [] },
+      { "category": "T-Shirts", "options": [] },
+      { "category": "Sweatshirts & Sweatpants", "options": [] },
+      { "category": "Loungewear", "options": [] },
+      { "category": "Coats & Jackets", "options": [] },
+      { "category": "Dresses & Jumpsuits", "options": [] },
+      { "category": "Puffer Jackers & Vests", "options": [] },
+      { "category": "Skirts", "options": [] },
+      { "category": "Shirts & Blouses", "options": [] },
+      { "category": "Button-Down Shirts", "options": [] },
+      { "category": "Everyday Leggings", "options": [] },
+      { "category": "Bras & Underwear", "options": [] },
+      { "category": "Shorts", "options": [] },
+      { "category": "Swimsuits", "options": [] }
+    ]
+  },
+  {
+    "people": "Boy's",
+    "items": [
+      { "category": "New Arrivals", "options": [] },
+      { "category": "Activewear", "options": [] },
+      { "category": "Sweatshirts & Sweatpants", "options": [] },
+      { "category": "Pajamas", "options": [] },
+      { "category": "Graphic Tees & T-Shirts", "options": [] },
+      { "category": "Polos", "options": [] },
+      { "category": "Button Downs & Flannels", "options": [] },
+      { "category": "Sweaters", "options": [] },
+      { "category": "Coats & Jackets", "options": [] },
+      { "category": "Pants", "options": [] },
+      { "category": "Jeans", "options": [] },
+      { "category": "Shorts", "options": [] },
+      { "category": "Swimsuits", "options": [] },
+      { "category": "Shoes", "options": [] },
+      { "category": "Accessories", "options": [] },
+      { "category": "Socks & Underwear", "options": [] },
+      { "category": "Multipacks", "options": [] }
+    ]
+  },
+  {
+    "people": "Girl's",
+    "items": [
+      { "category": "New Arrivals", "options": [] },
+      { "category": "Activewear", "options": [] },
+      { "category": "Sweatshirts & Sweatpants", "options": [] },
+      { "category": "Pajamas", "options": [] },
+      { "category": "Graphic Tees & T-Shirts", "options": [] },
+      { "category": "Shirts & Blouses", "options": [] },
+      { "category": "Sweaters", "options": [] },
+      { "category": "Coats & Jackets", "options": [] },
+      { "category": "Dresses & Jumpsuits", "options": [] },
+      { "category": "Swimsuits", "options": [] },
+      { "category": "Shorts & Skirts", "options": [] },
+      { "category": "Jeans", "options": [] },
+      { "category": "Leggings", "options": [] },
+      { "category": "Pants", "options": [] },
+      { "category": "Shoes", "options": [] },
+      { "category": "Accessories", "options": [] },
+      { "category": "Socks & Underwear", "options": [] }
+    ]
+  }
+]

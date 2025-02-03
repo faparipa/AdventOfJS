@@ -1,0 +1,71 @@
+.container {
+  background-color: black;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 4rem;
+  font-size: 24px;
+}
+
+.inputField label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.inputField input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: none;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.radioGroup h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.radioContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 15px;
+}
+
+.radioItem {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxGroup ul {
+  list-style: none;
+  padding: 0;
+}
+.checkboxGroup h4 {
+  font-size: 16px;
+}
+
+.checkboxGroup li {
+  margin-bottom: 10px;
+}
+
+.submitButton {
+  background-color: #33ff01;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  align-self: flex-start; /* Aligns button to the left, adjust as needed */
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: #45a049;
+}

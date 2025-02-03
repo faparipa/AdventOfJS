@@ -1,0 +1,16 @@
+.inputField label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.inputField input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: none;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 10px;
+  font-size: 24px;
+}

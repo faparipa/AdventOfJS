@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+}
+.sidebar {
+  margin-right: 2rem;
+}
+.link {
+  width: 300px;
+  background: #fefefe;
+  padding: 0 0.5rem;
+  margin: 1rem;
+  border-radius: 5px;
+}
+.link a {
+  text-decoration: none;
+  color: black;
+}

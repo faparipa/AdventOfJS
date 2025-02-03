@@ -1,0 +1,15 @@
+.textarea_container {
+  display: flex;
+  justify-content: center;
+  width: 470px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 25px 25px 30px;
+}
+.textarea {
+  width: 95%;
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}

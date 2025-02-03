@@ -1,0 +1,25 @@
+.tagBlock {
+  border: 1px solid white;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+.tagBlock button {
+  border: none;
+  background: none;
+  font-family: monospace;
+  font-size: 1rem;
+  color: lightgray;
+  cursor: pointer;
+}
+.tagBlock button:hover {
+  color: lightcoral;
+}
+
+.icon {
+  cursor: pointer;
+  border: none;
+  margin-left: 2px;
+}

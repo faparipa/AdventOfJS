@@ -1,0 +1,40 @@
+.rangeBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: right;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+}
+.rangeBox input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  margin: 0;
+  font-size: 16px;
+  text-align: right;
+}
+.rangeContainer {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.rangeContainer label {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.colorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}

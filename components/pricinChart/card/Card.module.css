@@ -1,0 +1,71 @@
+.card {
+  font-family: Inter;
+  width: 518px;
+  height: 644px;
+  position: absolute;
+  top: 153px;
+  left: 122px;
+  border: 3px solid #e8e8e8;
+  box-shadow: 5px 5px #e8e8e8;
+  border-radius: 20px;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  color: black;
+}
+.logo {
+  width: 41.43px;
+  height: 28.44px;
+  position: absolute;
+  top: 107px;
+  left: 351px;
+  gap: 0px;
+  opacity: 0px;
+}
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.price {
+  font-size: 112px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.price sup {
+  font-size: 62px;
+}
+.perMonth {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  text-align: left;
+}
+.line {
+  size: 3px;
+  color: #e8e8e8;
+  width: 100%;
+}
+.wrapper {
+  margin: 0 2rem;
+}
+.description {
+  display: flex;
+  flex-direction: row;
+}
+.description p {
+  margin-left: 1rem;
+}
+.checkContainer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 820px;
+  left: 261px;
+  color: black;
+}

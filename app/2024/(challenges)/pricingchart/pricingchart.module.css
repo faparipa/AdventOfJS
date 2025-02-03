@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  width: 50rem;
+  height: 60rem;
+  display: flex;
+  background: #eeeeee;
+}
+.logo {
+  width: 41.43px;
+  height: 28.44px;
+  position: absolute;
+  top: 107px;
+  left: 351px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.checkContainer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 820px;
+  left: 261px;
+  color: black;
+}

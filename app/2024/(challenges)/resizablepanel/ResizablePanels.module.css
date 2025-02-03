@@ -1,0 +1,70 @@
+/* ResizablePanels.module.css
+.panel {
+  border: 1px solid black;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.panel1 {
+  background-color: #cae3db;
+}
+
+.panel2 {
+  background-color: #698662;
+} */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+  color: black;
+}
+
+.topPanel {
+  display: flex;
+  flex: 1;
+}
+
+.leftPanel {
+  background-color: #cae3db;
+}
+
+.resizableHandle {
+  cursor: ew-resize;
+  width: 10px;
+  background-color: gray;
+  height: 100%;
+  position: relative;
+}
+
+.resizableHandle.active {
+  background-color: black; /* Aktív állapot színe */
+}
+
+.rightPanel {
+  flex: 1;
+  background-color: #698662;
+}
+
+.bottomSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.separator {
+  cursor: ns-resize;
+  width: 100%;
+  background-color: darkgray;
+  height: 10px;
+  position: relative;
+}
+
+.separator.active {
+  background-color: black; /* Aktív állapot színe */
+}
+
+.bottomPanel {
+  background-color: #536a4e;
+  width: 100%;
+}
