@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+.container {
+  padding: 10rem;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+.wrapper {
+  max-width: 1010px;
+}
+
+.wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper ul li {
+  margin-bottom: 75px;
+}
+
+.wrapper ul li a {
+  text-decoration: none;
+}
+
+.question {
+  background: white;
+  border: 5px solid black;
+  padding: 25px 38px;
+  width: 50rem;
+  display: block;
+  position: relative;
+  padding-left: 130px;
+  box-sizing: border-box;
+  color: black;
+}
+
+.question:before {
+  content: '';
+  display: block;
+  background: black;
+  width: 102px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.question-mark {
+  position: absolute;
+  left: 10px;
+  z-index: 5;
+  top: -45px;
+}
+
+.question:after {
+  content: '';
+  background: #f0f0f0 url('../../../../public/chevrondown.svg')
+    calc(100% - 12px) 20px no-repeat;
+  width: calc(100%);
+  position: absolute;
+  right: -55px;
+  top: 15px;
+  height: calc(100% + 15px);
+  z-index: -1;
+}
+
+.expand .question:after,
+.expand a:hover .question:after {
+  background: #f0f0f0 url('../../../../public/close.svg') calc(100% - 12px) 20px
+    no-repeat;
+  background-color: #ffdd00;
+}
+
+.question .content {
+  position: relative;
+  z-index: 3;
+}
+
+.answer {
+  display: none;
+}
+
+.expand .answer {
+  display: block;
+  background-color: #ffdd00;
+  width: 50rem;
+  margin-left: 55px;
+  padding: 30px 75px;
+  box-sizing: border-box;
+}

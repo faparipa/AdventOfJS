@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import style from './amypage.module.css';
-import Links from '@/lib/links';
+import Links24 from '@/lib/links24';
 
 export default function AmyPage() {
   return (
     <>
       <ul className={style.container}>
-        {Links.map((link) => (
+        {Links24.map((link) => (
           <li key={link.num} className={style.link}>
             <Link href={link.href}>
-              <img src='/AdventOfJs2024.png' alt='bacground image' />
+              <img src={link.image} alt='bacground image' />
               <p>Challange #{link.num}</p>
               <h3>{link.title}</h3>
             </Link>

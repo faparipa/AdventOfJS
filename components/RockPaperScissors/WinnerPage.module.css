@@ -1,0 +1,60 @@
+.countiner {
+  background-color: white;
+  min-width: 80vw;
+  min-height: 50vh;
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5rem;
+}
+
+.w-you-win {
+  background: url('../../public/you-win.svg') left top no-repeat;
+  background-size: auto 100%;
+}
+
+.w-computer-wins {
+  background: url('../../public/computer-wins.svg') right top no-repeat;
+  background-size: auto 100%;
+}
+.you-win,
+.computer-wins {
+  color: black;
+}
+.computer-wins h1.you-win,
+.you-win h1.computer-wins {
+  visibility: hidden;
+}
+
+.wrapper {
+  display: flex;
+  gap: 200px;
+  position: relative;
+}
+
+.winnerImg {
+  mix-blend-mode: multiply;
+}
+
+.computer-pick img {
+  transform: scaleX(-1);
+}
+
+.play-again {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2rem;
+  border: 2px solid black;
+  background: none;
+  padding: 15px 85px;
+  cursor: pointer;
+}
+
+.play-again:hover {
+  background: black;
+  color: white;
+}

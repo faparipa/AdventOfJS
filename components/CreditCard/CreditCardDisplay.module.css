@@ -1,0 +1,144 @@
+.credit-card__wrapper {
+  position: relative;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-334px);
+  z-index: 10;
+}
+
+.credit-card__wrapper.flip .credit-card__inner {
+  transform: rotateY(180deg);
+}
+
+.credit-card__inner {
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.credit-card--front,
+.credit-card--back {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 668px 413px;
+  width: 668px;
+  height: 413px;
+  margin-bottom: -200px;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.credit-card--back {
+  transform: rotateY(180deg) translateX(-334px);
+}
+
+.visa .credit-card--front {
+  background-image: url('../../public/cc__visa--front.png');
+}
+
+.visa .credit-card--back {
+  background-image: url('../../public/cc__visa--back.png');
+}
+
+.mastercard .credit-card--front {
+  background-image: url('../../public/cc__mastercard--front.png');
+}
+
+.mastercard .credit-card--back {
+  background-image: url('../../public/cc__mastercard--back.png');
+}
+
+.discover .credit-card--front {
+  background-image: url('../../public/cc__discover--front.png');
+}
+
+.discover .credit-card--back {
+  background-image: url('../../public/cc__discover--back.png');
+}
+
+.american .credit-card--front {
+  background-image: url('../../public/cc__american--front.png');
+}
+
+.american .credit-card--back {
+  background-image: url('../../public/cc__american--back.png');
+}
+
+.card-number {
+  position: absolute;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+  width: 575px;
+  top: 184px;
+  left: 118px;
+}
+
+.card-holder {
+  width: 575px;
+  position: absolute;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 34px;
+  text-transform: uppercase;
+  left: 118px;
+  top: 280px;
+}
+
+.expiration-date {
+  width: 575px;
+  position: absolute;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 34px;
+  text-transform: uppercase;
+  left: 355px;
+  top: 246px;
+}
+
+.shadow {
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.65);
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.emboss {
+  z-index: 5;
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    #ffffff 15.34%,
+    #dbdbdb 21.24%,
+    #ffffff 37.13%,
+    rgba(188, 203, 217, 0.68) 48.94%,
+    rgba(255, 255, 255, 0.830204) 58.93%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 5;
+  width: 100%;
+  height: 50px;
+}
+
+.signature {
+  color: black;
+  font-family: 'Beth Ellen', cursive;
+  font-size: 32px;
+  position: absolute;
+  left: 105px;
+  top: 142px;
+}
+
+.cvv {
+  color: black;
+  position: absolute;
+  right: 110px;
+  top: 170px;
+}

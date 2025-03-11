@@ -1,0 +1,76 @@
+.overlay {
+  backdrop-filter: blur(45px);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  box-shadow: 0px 0px 110px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  width: 60%;
+  padding: 75px 95px;
+  display: flex;
+  gap: 100px;
+  position: relative;
+}
+
+.productImage,
+.content {
+  flex: 1;
+}
+
+.close {
+  position: absolute;
+  background: none;
+  border: none;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.content h1 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: var(--pink);
+  font-size: 8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  padding: 0;
+  margin: 0 0 50px;
+  line-height: 0.9;
+}
+
+.description {
+  margin-bottom: 50px;
+}
+
+.description p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.buyNow {
+  background-color: var(--gold);
+  color: black;
+  border-radius: 100px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  padding: 20px 50px;
+  text-decoration: none;
+}
+
+.buyNow:hover {
+  background-color: #3452a5;
+  color: var(--gold);
+}

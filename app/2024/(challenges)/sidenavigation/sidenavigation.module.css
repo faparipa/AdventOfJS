@@ -5,7 +5,7 @@
   background-color: #fff;
   color: black;
   margin: 0 auto;
-  width: 45%;
+  width: 55%;
   padding: 3rem;
 }
 .article {
@@ -36,9 +36,9 @@
   color: red;
 }
 
-.chevron {
-  margin-left: 5px;
-}
+/* .chevron {
+  margin-left: 2px;
+} */
 
 .article {
   margin-left: 2rem;

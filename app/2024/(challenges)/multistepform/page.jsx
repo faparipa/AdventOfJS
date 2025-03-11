@@ -32,12 +32,30 @@ function MultiStepPage() {
     fav_reindeer: '',
     moviesWatched: [],
   });
+
   const [inputContain, setInputContain] = useState('inputField');
+  const [isSubmitEnabled, setIsSubmitEnabled] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
 
   useEffect(() => {
-    if (formData) {
-      localStorage.setItem('formData', JSON.stringify(formData));
+    const storedFormData = localStorage.getItem('formData');
+    if (storedFormData) {
+      setFormData(JSON.parse(storedFormData));
     }
+  }, []);
+
+  useEffect(() => {
+    if (
+      formData.fullName &&
+      formData.email &&
+      formData.fav_reindeer &&
+      formData.moviesWatched.length > 0
+    ) {
+      setIsSubmitEnabled(true);
+    } else {
+      setIsSubmitEnabled(false);
+    }
+    localStorage.setItem('formData', JSON.stringify(formData));
   }, [formData]);
 
   const handleInputChange = (e) => {
@@ -66,19 +84,26 @@ function MultiStepPage() {
     }));
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
 
-    // Clear localStorage and reset form data
     localStorage.removeItem('formData');
+
+    setSubmitMessage('Submitted'); // Set the submitted message
+
     setFormData({
       fullName: '',
       email: '',
       fav_reindeer: '',
       moviesWatched: [],
     });
+
+    // Show the message for 3 seconds before resetting the form
+    setTimeout(() => {
+      setSubmitMessage(''); // Reset the message after 3 seconds
+      setInputContain('inputField'); // Go back to the first page
+    }, 1000);
   };
 
   return (
@@ -107,6 +132,8 @@ function MultiStepPage() {
             handleCheckboxChange={handleCheckboxChange}
             setInputContain={setInputContain}
             handleSubmit={handleSubmit}
+            isSubmitEnabled={isSubmitEnabled}
+            submitMessage={submitMessage}
           />
         )}
       </form>

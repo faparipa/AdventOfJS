@@ -1,35 +1,71 @@
 'use client';
-import { useEffect, useState } from 'react';
+
+import { useState, useEffect } from 'react';
 import styles from './digitalclock.module.css';
 import Clock from '@/components/clock/clock';
 
 export default function DigitalClockPage() {
-  const [time, setTime] = useState(new Date());
+  const [time, setTime] = useState({
+    hours: new Date().getHours(),
+    minutes: new Date().getMinutes(),
+    seconds: new Date().getSeconds(),
+  });
+  const [isClient, setIsClient] = useState(false);
 
+  // Function to get the current time in HH:MM:SS AM/PM format without leading zeros
+  function getCurrentTime() {
+    const date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+
+    // Convert 24-hour time to 12-hour time
+    if (hours > 12) {
+      hours = hours - 12;
+    } else if (hours === 0) {
+      hours = 12; // Midnight is 12 AM
+    }
+
+    // Format time without leading zeros
+    hours = hours.toString();
+    minutes = minutes < 10 ? minutes.toString() : minutes; // Remove leading 0 in minutes
+    // seconds = seconds < 10 ? seconds.toString() : seconds; // Remove leading 0 in seconds
+
+    return {
+      hours,
+      minutes,
+      seconds,
+      ampm,
+    };
+  }
+
+  // Effect to run when component mounts (client-side)
   useEffect(() => {
+    setIsClient(true);
+
+    // Function to update the time every second
     const interval = setInterval(() => {
-      setTime(new Date());
+      setTime(getCurrentTime());
     }, 1000);
+
+    // Cleanup interval when component unmounts
     return () => clearInterval(interval);
   }, []);
 
-  const hours = time.getHours().toString().padStart(2, '0');
-  const minutes = time.getMinutes().toString().padStart(2, '0');
-  const seconds = time.getSeconds().toString().padStart(2, '0');
-  const AmPm = hours < 13 ? 'AM' : 'PM';
+  // Only render the clock once on the client-side
+  if (!isClient) {
+    return null; // Prevent rendering until after hydration
+  }
+
   return (
-    <div>
-      <h2>Digital Clock </h2>
-      <div className={styles.container}>
-        <Clock hours={hours} minutes={minutes} seconds={seconds} />
-        <div className={styles.wrapper}>
+    <div className={styles.container}>
+      <Clock {...time} />
+      <div className={styles.wrapper}>
+        <div className={styles.toolbar}>
+          <img src='/toolbar.svg' alt='toolbar' />
           <div className={styles.digitClock}>
-            <span>
-              {hours}:{minutes} {AmPm}
-            </span>
-          </div>
-          <div className={styles.toolbar}>
-            <img src='/toolbar.svg' alt='toolbar' />
+            {time.hours}:{time.minutes} {time.ampm}
           </div>
         </div>
       </div>

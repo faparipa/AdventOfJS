@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 const links = [
   { href: '/contact', path: 'Contact' },
-  { href: '/2023', path: '2023' },
+  { href: '/2021', path: '2021' },
   { href: '/2024', path: '2024' },
 ];
 
 export default function MainHeader() {
   const path = usePathname();
-  console.log(path);
+  //console.log(path);
 
   return (
     <header id='main-header'>

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.container {
+  font-family: 'Roboto Mono', monospace;
+  padding: 0;
+  margin: 0;
+  width: 70vw;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.feature {
+  padding-bottom: 250px; /* offset thumbnail strip at the bottom */
+}
+
+.feature img {
+  max-height: 500px;
+  max-width: 700px;
+}
+
+.caption {
+  text-align: center;
+  font-size: 14px;
+}
+
+.thumbnails {
+  margin: 0 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70vw;
+  height: 220px;
+  overflow-x: scroll;
+  scroll-padding: 0 100px;
+  scroll-snap-type: both mandatory;
+}
+
+.thumbnails ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  position: relative;
+  padding: 0 100px;
+}
+
+.thumbnails li:last-child img {
+  margin-right: 100px;
+}
+
+.thumbnails li {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+.thumbnails .selected {
+  outline: 10px solid #ff00c7;
+  outline-offset: -10px;
+}
+.selected {
+  outline: 10px solid #ff00c7; /* Válaszd a megfelelő színt */
+  transform: scale(1.1); /* Növeli a kiválasztott thumbnail-t */
+}
+
+.thumbnails img {
+  object-fit: cover;
+  height: 175px;
+  width: 175px;
+  vertical-align: middle;
+}
+
+.left,
+.right {
+  background: rgba(255, 0, 199, 0.3);
+  width: 100px;
+  height: 60vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 200px;
+  box-sizing: border-box;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.left:hover,
+.right:hover {
+  background: rgba(255, 0, 199, 1);
+}
+
+.right img {
+  margin: auto;
+}
+.left img {
+  transform: rotate(180deg);
+  margin: auto;
+}

@@ -1,0 +1,53 @@
+.episodes {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.episodes li {
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+.episode {
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+.checkbox {
+  display: none;
+}
+
+.label {
+  cursor: pointer;
+}
+
+.label input[type='checkbox'] + span {
+  background: url('../../public/checkbox--unchecked.svg') left top no-repeat;
+  background-size: 20px 20px;
+  min-height: 20px;
+  padding-left: 30px;
+}
+
+.label input[type='checkbox']:checked + span {
+  background-image: url('../../public/checkbox--checked.svg');
+  text-decoration: line-through;
+  color: #c9cdd1;
+}
+
+.btn {
+  background: #8c59ff;
+  border: none;
+  border-radius: 24px;
+  text-transform: uppercase;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  padding: 8px 25px;
+  color: white;
+  line-height: 1;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background: #543599;
+}

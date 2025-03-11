@@ -133,7 +133,12 @@ const DatePicker = () => {
         onFocus={handleInputFocus}
         readOnly
       />
-      <img src='/calendar.svg' alt='calendar' className={styles.icon} />
+      <img
+        src='/calendar.svg'
+        alt='calendar'
+        className={styles.icon}
+        onClick={handleInputFocus}
+      />
 
       {isOpen && (
         <div className={styles.datePicker}>

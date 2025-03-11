@@ -57,7 +57,7 @@ function RangeInput({ label, name, value, setValue }) {
             type='number'
             name={name}
             id={name}
-            min={0}
+            min={-100}
             max={100}
             value={value}
             onChange={handleInputChange}
@@ -69,7 +69,7 @@ function RangeInput({ label, name, value, setValue }) {
         type='range'
         name={name}
         id={name}
-        min={0}
+        min={-100}
         max={100}
         value={value} // Bind range input to state
         onChange={handleInputChange}

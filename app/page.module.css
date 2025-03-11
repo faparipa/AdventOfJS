@@ -23,7 +23,6 @@
 }
 
 .link {
-  /* background: url('../../public/AdventOfJs2024.png'); */
   border: solid 2px #2d2d2b;
   border-radius: 10px;
   background-color: #20201e;
@@ -49,4 +48,13 @@
 
 .link a:hover {
   background-color: #2d2d2b;
+}
+.main {
+  display: flex;
+}
+.linkTo {
+  text-decoration: none;
+  font-size: 3rem;
+  margin: 2rem;
+  color: aqua;
 }

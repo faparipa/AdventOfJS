@@ -1,0 +1,13 @@
+.container {
+  width: 80rem;
+}
+.videoInputContainer {
+  width: 20rem;
+}
+.videoInput {
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  height: 2rem;
+  width: 100%;
+  padding: 8px;
+}

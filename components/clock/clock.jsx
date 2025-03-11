@@ -1,13 +1,11 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import styles from './clock.module.css';
 
 const Clock = ({ hours, minutes, seconds }) => {
   const secondHandRef = useRef(null);
   const minHandRef = useRef(null);
   const hourHandRef = useRef(null);
-
-  const [prevSeconds, setPrevSeconds] = useState(seconds);
 
   useEffect(() => {
     const secondHand = secondHandRef.current;
@@ -16,13 +14,9 @@ const Clock = ({ hours, minutes, seconds }) => {
 
     function setDate() {
       const secondsDegrees = (seconds / 60) * 360 + 90;
-      if (seconds !== prevSeconds) {
-        secondHand.style.transition = 'transform 0.05s ease';
-        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-        setPrevSeconds(seconds);
-      } else {
-        secondHand.style.transition = 'none'; // Disable transition when no change in seconds
-      }
+      secondHand.style.transition =
+        seconds === 0 ? 'none' : 'transform 0.05s ease';
+      secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
       const minsDegrees = (minutes / 60) * 360 + (seconds / 60) * 6 + 90;
       minHand.style.transform = `rotate(${minsDegrees}deg)`;
@@ -37,7 +31,7 @@ const Clock = ({ hours, minutes, seconds }) => {
     const intervalId = setInterval(setDate, 1000);
 
     return () => clearInterval(intervalId);
-  }, [seconds, minutes, hours, prevSeconds]);
+  }, [seconds, minutes, hours]); // Update clock when time changes
 
   return (
     <div className={styles.clock}>

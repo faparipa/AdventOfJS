@@ -15,7 +15,7 @@ function SideNavigationPage() {
     const observerOptions = {
       root: null, // A viewport-ot figyeljük
       rootMargin: '0px',
-      threshold: 0.7, // A szekció akkor válik aktívvá, ha legalább 50%-a látható
+      threshold: 0.5, // A szekció akkor válik aktívvá, ha legalább 50%-a látható
     };
 
     const observer = new IntersectionObserver((entries) => {

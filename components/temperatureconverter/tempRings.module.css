@@ -66,7 +66,7 @@
 }
 .deg {
   position: absolute;
-  width: 170px;
+  width: 195px;
   margin-left: 1rem;
   z-index: 5; /* Az input mezőt a körök fölé helyezzük */
   text-align: center;

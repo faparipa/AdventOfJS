@@ -14,19 +14,24 @@
   display: grid;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 .link img {
   width: 100%;
+  height: 380px;
+  opacity: 0.9;
 }
 
 .link {
-  /* background: url('../../public/AdventOfJs2024.png'); */
-  border: solid 2px #2d2d2b;
+  background: url('../../public/AdventOfJs2024.png');
+  box-shadow: 3px 5px 15px 5px rgba(173, 213, 230, 0.3);
+  height: 550px;
+  border: solid 2px #e7e7e7;
   border-radius: 10px;
-  background-color: #20201e;
+  background-color: aqua;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -36,7 +41,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.5rem;
   color: #a07c5b;
   text-decoration: none;
   font-size: 1.2rem;
@@ -47,6 +52,7 @@
   margin: 0;
 }
 
-.link a:hover {
+.link:hover {
   background-color: #2d2d2b;
+  color: teal;
 }

@@ -1,49 +1,49 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Toggle from '@/components/pricinChart/toggle/Toggle';
 import styles from './cssboxshadow.module.css';
 import RangeInput from '@/components/cssBoxShadow/RangeInput';
 import ColorInput from '@/components/cssBoxShadow/ColorInput';
 import CodeContiner from '@/components/cssBoxShadow/CodeContiner';
 
+const defaultFormData = {
+  hlength: 5,
+  vlength: 10,
+  bradius: 20,
+  sradius: 15,
+  opacity: 0.3,
+  scolor: '#000000',
+  bgcolor: '#ffffff',
+  boxcolor: '#F3A712',
+};
+
 function CSSBoxShadowGenerator() {
-  const [selectedPlan, setSelectedPlan] = useState('Outline');
-  const [isCode, setIscode] = useState(false); // Az isCode értéke kezdetben false
-  const [code, setCode] = useState(''); // Az aktuális CSS kódot tárolja
-
-  // formData alapértelmezett értékek
-  const defaultFormData = {
-    hlength: 5,
-    vlength: 10,
-    bradius: 20,
-    sradius: 15,
-    opacity: 0.3,
-    scolor: '#000000',
-    bgcolor: '#ffffff', // alapértelmezett háttérszín
-    boxcolor: '#F3A712',
-  };
-
   const [formData, setFormData] = useState(defaultFormData);
+  const [selectedPlan, setSelectedPlan] = useState('Outline');
+  const [isCode, setIsCode] = useState(false);
+  const [code, setCode] = useState('');
 
-  const togglePlan = () => {
-    setSelectedPlan((prevPlan) =>
-      prevPlan === 'Outline' ? 'Inset' : 'Outline'
-    );
+  const hexToRgb = (hex, opacity) => {
+    hex = hex.replace('#', '');
+    let r = parseInt(hex.substring(0, 2), 16);
+    let g = parseInt(hex.substring(2, 4), 16);
+    let b = parseInt(hex.substring(4, 6), 16);
+    return `rgba(${r}, ${g}, ${b}, ${opacity})`;
   };
 
-  // Állapot frissítése
-  const handleInputChange = (name, value) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  const createBoxShadow = useCallback(
+    ({ hlength, vlength, bradius, sradius, scolor, opacity }) => {
+      const color = scolor.startsWith('#')
+        ? hexToRgb(scolor, opacity)
+        : `${scolor}, ${opacity}`;
+      return `${hlength}px ${vlength}px ${bradius}px ${sradius}px ${color}`;
+    },
+    []
+  );
 
-  // Box shadow generálás dinamikusan
-  const boxShadowStyle = `${formData.hlength}px ${formData.vlength}px ${formData.bradius}px ${formData.sradius}px rgba(0, 0, 0, ${formData.opacity})`;
+  const boxShadowStyle = createBoxShadow(formData);
 
-  // CSS kód generálása
   const generateCSS = () => {
     const cssCode = `
       .box {
@@ -58,15 +58,24 @@ function CSSBoxShadowGenerator() {
         background-color: ${formData.bgcolor};
       }
     `;
-    setCode(cssCode); // A kódot tároljuk a setCode állapotban
-    setIscode(true); // Mutassuk a kódot
+    setCode(cssCode);
+    setIsCode(true);
   };
 
-  // CodeContainer bezárásakor visszaállítjuk az alapértelmezett értékeket
+  const handleInputChange = (name, value) => {
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const togglePlan = () => {
+    setSelectedPlan((prevPlan) =>
+      prevPlan === 'Outline' ? 'Inset' : 'Outline'
+    );
+  };
+
   const handleCloseCodeContainer = () => {
     setFormData(defaultFormData);
     setSelectedPlan('Outline');
-    setIscode(false); // Bezárjuk a kód konténert
+    setIsCode(false);
   };
 
   return (
@@ -165,25 +174,22 @@ function CSSBoxShadowGenerator() {
       </div>
 
       {isCode ? (
-        <CodeContiner
-          cssCode={code} // Az aktuális CSS kód átadása a CodeContainer komponensnek
-          setIsCode={handleCloseCodeContainer} // Bezáráskor visszaállítja az alapértelmezett értékeket
-        />
+        <CodeContiner cssCode={code} setIsCode={handleCloseCodeContainer} />
       ) : (
         <div
           className={styles.boxContainer}
-          style={{ backgroundColor: formData.bgcolor }} // background szín dinamikus
+          style={{ backgroundColor: formData.bgcolor }}
         >
           <div
             className={styles.box}
             style={{
-              backgroundColor: formData.boxcolor, // Box szín dinamikus
+              backgroundColor: formData.boxcolor,
               boxShadow:
                 selectedPlan === 'Outline'
                   ? boxShadowStyle
                   : `${boxShadowStyle} inset`,
             }}
-          ></div>
+          />
         </div>
       )}
     </div>

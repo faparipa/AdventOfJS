@@ -1,0 +1,34 @@
+.main {
+  padding: 100px 0 0 75px;
+  display: flex;
+  gap: 50px;
+}
+
+.mainTitle {
+  color: white;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 50px;
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+
+.content p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.more {
+  background: url('../../public/arrow.svg') right center no-repeat;
+  font-family: 'Roboto Mono', monospace;
+  color: var(--primary);
+  text-transform: uppercase;
+  padding-right: 30px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.more:hover {
+  padding-right: 35px;
+}

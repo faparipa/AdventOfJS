@@ -6,10 +6,13 @@ function CheckBoxGroup({
   handleCheckboxChange,
   setInputContain,
   handleSubmit,
+  isSubmitEnabled,
+  submitMessage,
 }) {
   function handleBackClick() {
     setInputContain('radioGroup');
   }
+
   return (
     <>
       <div className={styles.checkboxGroup}>
@@ -40,9 +43,15 @@ function CheckBoxGroup({
           &larr;
         </button>
 
-        <button type='submit' className={styles.btn} onClick={handleSubmit}>
+        <button
+          type='submit'
+          className={styles.btn}
+          onClick={handleSubmit}
+          disabled={!isSubmitEnabled}
+        >
           Submit
         </button>
+        <h4 className={styles.submitMessage}>{submitMessage}</h4>
       </div>
     </>
   );

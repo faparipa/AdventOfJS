@@ -1,0 +1,33 @@
+
+.tip-percentages {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 35px;
+  background: #eeeeee;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+
+.label {
+  background: #ffffff;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #60c1b6;
+  font-family: 'Roboto Mono', monospace;
+  width: 135px;
+  height: 68px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioInput:checked + .label {
+  background: #60c1b6;
+  color: white;
+}

@@ -1,0 +1,29 @@
+.container {
+  background: #37b2c3;
+  padding: 2rem;
+  width: 80%;
+}
+
+.piano {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.whiteKeys {
+  fill: white;
+}
+
+.whiteKeys:hover {
+  fill: #ffd200;
+}
+
+.blackKeys {
+  fill: black;
+}
+
+.blackKeys:hover {
+  fill: #f40082;
+}

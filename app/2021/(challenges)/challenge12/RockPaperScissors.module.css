@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+.container {
+  min-width: 80vw;
+  min-height: 100vh;
+  padding: 5rem;
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.wrapper {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 75px;
+}
+
+.wrapper ul li.pick-one {
+  display: flex;
+  text-align: center;
+}
+
+.wrapper ul li.pick-one button {
+  background: none;
+  border: 2px solid black;
+  font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
+  height: 355px;
+  width: 325px;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper ul li.pick-one button:hover {
+  border: 10px solid #ffb800;
+}
+
+.wrapper ul li.pick-one img {
+  max-height: 250px;
+  max-width: 250px;
+}

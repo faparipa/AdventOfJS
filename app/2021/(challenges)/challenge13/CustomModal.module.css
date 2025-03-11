@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --pink: #f41e82;
+  --gold: #ffd200;
+}
+
+.container {
+  margin: 0;
+  padding: 5rem 0;
+  min-width: 80vw;
+  min-height: 80vh;
+  background: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spot {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.wrapper svg circle.dot {
+  fill: var(--pink);
+  position: relative;
+}
+
+.pinkCircle:hover {
+  animation-name: beacon;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+@keyframes beacon {
+  0% {
+    r: 22;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    r: 50;
+    opacity: 0;
+  }
+}

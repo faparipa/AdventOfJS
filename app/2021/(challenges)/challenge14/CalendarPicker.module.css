@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@400;700&display=swap');
+
+.container {
+  position: relative;
+  display: inline-block;
+  width: 700px;
+  height: 85px;
+  border-radius: 10px;
+  background: #fff;
+  margin: 100px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: black;
+}
+.wrapper {
+  background: #ffffff;
+  box-shadow: 0px 2.3128px 39.3176px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  padding: 75px 100px;
+}
+
+.icon {
+  position: absolute;
+  width: 31px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+.datePicker {
+  margin-top: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #f4f4f4;
+  border: 2px solid #dbdbdb;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.today {
+  background: green;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #f0f0f0;
+  border-bottom: 2px solid #bdbdbd;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  color: #000;
+}
+
+.arrowbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.calendar {
+  padding: 10px;
+}
+
+.weekdays {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+
+  color: #fff;
+  background: #000;
+  height: 40px;
+}
+.weekdays div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bdbdbd;
+  width: 100%;
+  height: 100%;
+}
+
+.day {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  border: 1px solid #bdbdbd;
+}
+
+.day:hover {
+  background-color: #f0f0f0;
+}
+
+.passed {
+  color: #ccc;
+}
+
+.selected {
+  border: 2px solid pink;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 0px;
+}
+
+.days div {
+  padding-top: 12px;
+  width: 100%;
+  height: 60px;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #bdbdbd;
+}
+
+.days div:hover {
+  background-color: #00f2ff;
+}

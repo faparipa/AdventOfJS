@@ -1,12 +1,33 @@
-import Links from '@/lib/links';
+'use client';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import styles from './layout.module.css';
-function layout({ children }) {
+import Links from '@/lib/links24';
+import { usePathname } from 'next/navigation';
+
+function Layout({ children }) {
+  const path = usePathname();
+  const lastPart = path.slice(path.lastIndexOf('/') + 1);
+  const [activeLink, setActiveLink] = useState(lastPart);
+
+  function handleActive(title) {
+    const formatedTitle = title.replace(/\s+/g, '').toLowerCase();
+    setActiveLink(formatedTitle);
+  }
+
   return (
     <div className={styles.container}>
       <ul className={styles.sidebar}>
         {Links.map((link) => (
-          <li key={link.num} className={styles.link}>
+          <li
+            key={link.num}
+            className={
+              activeLink === link.title.replace(/\s+/g, '').toLowerCase()
+                ? `${styles.link} ${styles.active}`
+                : styles.link
+            }
+            onClick={() => handleActive(link.title)}
+          >
             <Link href={link.href}>
               <p>Challange #{link.num}</p>
               <h3>{link.title}</h3>
@@ -19,4 +40,4 @@ function layout({ children }) {
   );
 }
 
-export default layout;
+export default Layout;

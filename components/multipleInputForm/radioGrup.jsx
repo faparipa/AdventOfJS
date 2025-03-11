@@ -7,11 +7,17 @@ function RadioGrup({
   setInputContain,
 }) {
   function handleClick() {
+    if (!formData.fav_reindeer) {
+      alert('Please select a favorite reindeer');
+      return;
+    }
     setInputContain('checkBoxGroup');
   }
+
   function handleBackClick() {
     setInputContain('inputField');
   }
+
   return (
     <>
       <div className={styles.radioGroup}>
@@ -41,7 +47,12 @@ function RadioGrup({
         >
           &larr;
         </button>
-        <button type='button' className={styles.btn} onClick={handleClick}>
+        <button
+          type='button'
+          className={styles.btn}
+          onClick={handleClick}
+          disabled={!formData.fav_reindeer}
+        >
           Next
         </button>
       </div>
